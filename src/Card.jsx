@@ -1,6 +1,5 @@
 //import React from 'react'
 import 'tachyons'
-import PropTypes from 'prop-types';
 
 const Card = ({ name, email, id}) => {
     return (

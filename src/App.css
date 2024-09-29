@@ -1,0 +1,8 @@
+.dark-placeholder::placeholder {
+    color: #333;
+    opacity: 1;
+}
+
+.input-text-color {
+    color: black;
+}
