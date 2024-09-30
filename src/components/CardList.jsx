@@ -2,9 +2,6 @@
 import Card from './Card.jsx'
 
 const CardList = ({robots}) => {
-    if (true) {
-        throw new Error('No!');
-    }
     
     return (
         <div>
