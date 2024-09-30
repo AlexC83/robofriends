@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import './App.css'
-import CardList from '../components/CardList'
-import Scroll from '../components/Scroll'
-import SearchBox from '../components/SearchBox'
-import {robots} from '../robots'
+import React, { Component } from 'react';
+import './App.css';
+import CardList from '../components/CardList';
+import ErrorBoundry from '../components/ErrorBoundry';
+import Scroll from '../components/Scroll';
+import SearchBox from '../components/SearchBox';
+import {robots} from '../robots';
 
 class App extends React.Component {
     constructor() {
@@ -37,7 +38,9 @@ class App extends React.Component {
                 <h1>RoboFriends</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <Scroll>
-                    <CardList robots={filteredRobots} />
+                    <ErrorBoundry>
+                        <CardList robots={filteredRobots} />
+                    </ErrorBoundry>
                 </Scroll>
             </div>
         );
